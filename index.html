@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RFQ to quote synthetic proof</title>
+  <style>
+    :root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #172033; background: #f5f3ec }
+    * { box-sizing: border-box }
+    body { margin: 0 }
+    main { max-width: 1120px; margin: 0 auto; padding: 48px 24px 80px }
+    h1 { font-size: clamp(34px, 6vw, 64px); line-height: 1; margin: 0 0 18px }
+    h2 { margin-top: 42px }
+    p { line-height: 1.6; max-width: 820px }
+    .notice { background: #fff2c9; border: 1px solid #e5cf88; border-radius: 16px; padding: 16px 18px; margin: 24px 0 }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 28px 0 }
+    .metric { background: white; border: 1px solid #dcd8ca; border-radius: 18px; padding: 20px }
+    .metric strong { display: block; font-size: 28px; margin-bottom: 6px }
+    .metric span { color: #68707c }
+    .panel { background: white; border: 1px solid #dcd8ca; border-radius: 18px; padding: 22px; overflow-x: auto }
+    table { width: 100%; border-collapse: collapse; min-width: 860px }
+    th, td { text-align: left; padding: 12px 10px; border-bottom: 1px solid #ece8dc; vertical-align: top }
+    th { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: #6b7280 }
+    .ok { color: #17653e; font-weight: 700 }
+    .review { color: #9a5a00; font-weight: 700 }
+    .downloads { display: flex; flex-wrap: wrap; gap: 10px }
+    .downloads a { color: #173f31; border: 1px solid #173f31; border-radius: 999px; padding: 10px 14px; text-decoration: none }
+    pre { white-space: pre-wrap; line-height: 1.5; margin: 0 }
+    @media (max-width: 760px) { .grid { grid-template-columns: 1fr } }
+  </style>
+</head>
+<body>
+  <main>
+    <div style="text-transform: uppercase; letter-spacing: .14em; font-weight: 800; font-size: 12px; color: #68707c">Independent synthetic proof</div>
+    <h1>RFQ to quote draft with no guessed catalogue prices</h1>
+    <p>This small proof takes a synthetic text PDF, extracts its line items, matches exact approved SKUs, flags an unknown SKU for review, and produces a real Excel quote draft.</p>
+    <div class="notice">This is new independent work prepared for a possible paid test. It is not client delivery and it does not claim prior paid n8n work.</div>
+
+    <section class="grid">
+      <div class="metric"><strong>4</strong><span>RFQ lines extracted</span></div>
+      <div class="metric"><strong>3</strong><span>Exact approved SKU matches</span></div>
+      <div class="metric"><strong>1</strong><span>Item stopped for review</span></div>
+    </section>
+
+    <h2>Extracted RFQ</h2>
+    <section class="panel">
+      <pre>SYNTHETIC RFQ
+Project: Demo kitchen renovation
+Currency: USD
+
+SKU-1001 | Stainless sink 600mm | Qty 2
+SKU-2004 | Mixer tap chrome | Qty 1
+SKU-3100 | Flexible connector 1/2in | Qty 4
+SKU-9999 | Custom backsplash panel | Qty 3</pre>
+    </section>
+
+    <h2>Draft quotation result</h2>
+    <section class="panel">
+      <table>
+        <thead>
+          <tr><th>SKU</th><th>Description</th><th>Qty</th><th>Approved unit price</th><th>Line total</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>SKU-1001</td><td>Stainless sink 600mm</td><td>2</td><td>USD 185.00</td><td>USD 370.00</td><td class="ok">MATCHED_APPROVED_PRICE</td></tr>
+          <tr><td>SKU-2004</td><td>Mixer tap chrome</td><td>1</td><td>USD 72.50</td><td>USD 72.50</td><td class="ok">MATCHED_APPROVED_PRICE</td></tr>
+          <tr><td>SKU-3100</td><td>Flexible connector 1/2in</td><td>4</td><td>USD 6.20</td><td>USD 24.80</td><td class="ok">MATCHED_APPROVED_PRICE</td></tr>
+          <tr><td>SKU-9999</td><td>Custom backsplash panel</td><td>3</td><td>Not priced</td><td>Not priced</td><td class="review">REVIEW_REQUIRED</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <h2>Review rule</h2>
+    <p>Exact SKU matches may use the approved catalogue price. An unknown SKU is left unpriced and must be reviewed rather than silently substituted or guessed.</p>
+
+    <h2>Artifacts</h2>
+    <div class="downloads">
+      <a href="sample-rfq.pdf">Synthetic source PDF</a>
+      <a href="extracted-rfq.txt">Extracted text</a>
+      <a href="catalog.csv">Approved catalogue</a>
+      <a href="quote-draft.xlsx">Excel draft</a>
+      <a href="result.json">Structured result</a>
+      <a href="build-proof.ps1">Build script</a>
+    </div>
+  </main>
+</body>
+</html>
