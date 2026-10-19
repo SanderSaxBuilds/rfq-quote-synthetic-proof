@@ -1,0 +1,10 @@
+SYNTHETIC RFQ
+Project: Demo kitchen renovation
+Currency: USD
+
+SKU-1001 | Stainless sink 600mm | Qty 2
+SKU-2004 | Mixer tap chrome | Qty 1
+SKU-3100 | Flexible connector 1/2in | Qty 4
+SKU-9999 | Custom backsplash panel | Qty 3
+
+Please prepare a draft quotation using approved catalogue pricing only.

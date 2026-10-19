@@ -1,0 +1,59 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 464 >>
+stream
+BT
+/F1 11 Tf
+72 748 Td
+(SYNTHETIC RFQ) Tj
+0 -16 Td
+(Project: Demo kitchen renovation) Tj
+0 -16 Td
+(Currency: USD) Tj
+0 -16 Td
+() Tj
+0 -16 Td
+(SKU-1001 | Stainless sink 600mm | Qty 2) Tj
+0 -16 Td
+(SKU-2004 | Mixer tap chrome | Qty 1) Tj
+0 -16 Td
+(SKU-3100 | Flexible connector 1/2in | Qty 4) Tj
+0 -16 Td
+(SKU-9999 | Custom backsplash panel | Qty 3) Tj
+0 -16 Td
+() Tj
+0 -16 Td
+(Please prepare a draft quotation using approved catalogue pricing only.) Tj
+0 -16 Td
+ET
+
+endobj
+6 0 obj
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+0000000816 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+841
+%%EOF

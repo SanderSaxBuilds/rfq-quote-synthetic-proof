@@ -1,0 +1,52 @@
+{
+  "source_pdf": "sample-rfq.pdf",
+  "extracted_text": "extracted-rfq.txt",
+  "catalogue": "catalog.csv",
+  "policy": "Exact SKU matches only. Unknown SKUs are unpriced and require review.",
+  "items": [
+    {
+      "sku": "SKU-1001",
+      "requested_description": "Stainless sink 600mm",
+      "approved_description": "Stainless sink 600mm",
+      "quantity": 2,
+      "unit_price": 185.0,
+      "line_total": 370.0,
+      "currency": "USD",
+      "status": "MATCHED_APPROVED_PRICE",
+      "note": ""
+    },
+    {
+      "sku": "SKU-2004",
+      "requested_description": "Mixer tap chrome",
+      "approved_description": "Mixer tap chrome",
+      "quantity": 1,
+      "unit_price": 72.5,
+      "line_total": 72.5,
+      "currency": "USD",
+      "status": "MATCHED_APPROVED_PRICE",
+      "note": ""
+    },
+    {
+      "sku": "SKU-3100",
+      "requested_description": "Flexible connector 1/2in",
+      "approved_description": "Flexible connector 1/2in",
+      "quantity": 4,
+      "unit_price": 6.2,
+      "line_total": 24.8,
+      "currency": "USD",
+      "status": "MATCHED_APPROVED_PRICE",
+      "note": ""
+    },
+    {
+      "sku": "SKU-9999",
+      "requested_description": "Custom backsplash panel",
+      "approved_description": "",
+      "quantity": 3,
+      "unit_price": null,
+      "line_total": null,
+      "currency": "USD",
+      "status": "REVIEW_REQUIRED",
+      "note": "SKU is not in the approved catalogue. No price guessed."
+    }
+  ]
+}
