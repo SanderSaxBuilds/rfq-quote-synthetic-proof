@@ -43,3 +43,11 @@ The script reads `source-rfq.txt` and `catalog.csv` from the same folder and rew
 | `result.json` | Line-by-line match result, output |
 | `quote-draft.xlsx` | Excel quote draft, output |
 | `index.html` | GitHub Pages summary |
+
+## Contact
+
+More work by Alexandr Khrustalev in the [portfolio](https://sandersaxbuilds.github.io/selected-work/). Contact on Telegram [@sandersax](https://t.me/sandersax).
+
+## License
+
+MIT. See LICENSE.
